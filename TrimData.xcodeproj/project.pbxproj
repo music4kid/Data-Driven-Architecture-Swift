@@ -1,0 +1,1065 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67168AFA1C7EDD2800273020 /* FeedItemNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67168AF91C7EDD2800273020 /* FeedItemNormal.swift */; };
+		67168AFE1C7EDE3E00273020 /* FeedCellGitHubRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67168AFD1C7EDE3E00273020 /* FeedCellGitHubRepo.swift */; };
+		67168B011C7EDF4400273020 /* FeedItemGitHubRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67168B001C7EDF4400273020 /* FeedItemGitHubRepo.swift */; };
+		67168B031C7EEEAC00273020 /* ObservableEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67168B021C7EEEAC00273020 /* ObservableEx.swift */; };
+		67168B051C7FE7D300273020 /* LogEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67168B041C7FE7D300273020 /* LogEx.swift */; };
+		67168B071C7FE9CD00273020 /* ObservableUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67168B061C7FE9CD00273020 /* ObservableUI.swift */; };
+		67168B091C7FF80500273020 /* MemoryEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67168B081C7FF80500273020 /* MemoryEx.swift */; };
+		67168B0B1C801CC000273020 /* DALFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67168B0A1C801CC000273020 /* DALFactory.swift */; };
+		67168B101C801D8F00273020 /* GitHubDalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67168B0F1C801D8F00273020 /* GitHubDalProtocol.swift */; };
+		67168B121C801DAF00273020 /* GitHubDalImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67168B111C801DAF00273020 /* GitHubDalImp.swift */; };
+		6722836F1C808B0E0048CBF8 /* SystemEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6722836E1C808B0E0048CBF8 /* SystemEx.swift */; };
+		672283711C80904A0048CBF8 /* DALImpBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672283701C80904A0048CBF8 /* DALImpBase.swift */; };
+		672283731C8157540048CBF8 /* SQLiteEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672283721C8157540048CBF8 /* SQLiteEx.swift */; };
+		672283751C81639A0048CBF8 /* AppInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672283741C81639A0048CBF8 /* AppInitializer.swift */; };
+		67425EBF1C7DB40E001EBE37 /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425EBE1C7DB40E001EBE37 /* StringEx.swift */; };
+		67425EC31C7DB50B001EBE37 /* GitHubRepositoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425EC21C7DB50B001EBE37 /* GitHubRepositoryRequest.swift */; };
+		67425EC61C7DB58C001EBE37 /* HttpRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425EC51C7DB58C001EBE37 /* HttpRequestManager.swift */; };
+		67425EC81C7DB6DE001EBE37 /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425EC71C7DB6DE001EBE37 /* GitHubRequest.swift */; };
+		67425ECA1C7DB953001EBE37 /* GitHubAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425EC91C7DB953001EBE37 /* GitHubAccountRequest.swift */; };
+		67425ECC1C7DD8EF001EBE37 /* GithubAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425ECB1C7DD8EF001EBE37 /* GithubAccount.swift */; };
+		67425ECE1C7DDB74001EBE37 /* GitHubServiceCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425ECD1C7DDB74001EBE37 /* GitHubServiceCache.swift */; };
+		67425ED01C7DE65A001EBE37 /* DataEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425ECF1C7DE65A001EBE37 /* DataEvent.swift */; };
+		67633A2A1C798C4500A4F374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A291C798C4500A4F374 /* AppDelegate.swift */; };
+		67633A2C1C798C4500A4F374 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A2B1C798C4500A4F374 /* FirstViewController.swift */; };
+		67633A2E1C798C4500A4F374 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A2D1C798C4500A4F374 /* SecondViewController.swift */; };
+		67633A311C798C4500A4F374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67633A2F1C798C4500A4F374 /* Main.storyboard */; };
+		67633A331C798C4500A4F374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67633A321C798C4500A4F374 /* Assets.xcassets */; };
+		67633A361C798C4500A4F374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67633A341C798C4500A4F374 /* LaunchScreen.storyboard */; };
+		67633A411C798C4500A4F374 /* TrimDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A401C798C4500A4F374 /* TrimDataTests.swift */; };
+		67633A4C1C798C4500A4F374 /* TrimDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A4B1C798C4500A4F374 /* TrimDataUITests.swift */; };
+		67633A631C798EED00A4F374 /* TDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A621C798EED00A4F374 /* TDViewController.swift */; };
+		67633A831C7ABC9C00A4F374 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 67633A801C7ABC9C00A4F374 /* Icon-120.png */; };
+		67633A841C7ABC9C00A4F374 /* Icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = 67633A811C7ABC9C00A4F374 /* Icon-180.png */; };
+		67633A851C7ABC9C00A4F374 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 67633A821C7ABC9C00A4F374 /* Icon.png */; };
+		67633A871C7AD40C00A4F374 /* FeedStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A861C7AD40C00A4F374 /* FeedStreamView.swift */; };
+		67633A891C7AD42900A4F374 /* FeedStreamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A881C7AD42900A4F374 /* FeedStreamController.swift */; };
+		67633A8B1C7AD44A00A4F374 /* SettingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A8A1C7AD44A00A4F374 /* SettingListController.swift */; };
+		67633A911C7B04ED00A4F374 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A8E1C7B04ED00A4F374 /* Context.swift */; };
+		67633A921C7B04ED00A4F374 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A8F1C7B04ED00A4F374 /* Object.swift */; };
+		67633A931C7B04ED00A4F374 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A901C7B04ED00A4F374 /* UIView.swift */; };
+		67633A991C7B4EC100A4F374 /* SettingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A981C7B4EC100A4F374 /* SettingListView.swift */; };
+		67633A9B1C7BF8CA00A4F374 /* FeedStreamDH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A9A1C7BF8CA00A4F374 /* FeedStreamDH.swift */; };
+		67633A9D1C7BF8E700A4F374 /* FeedStreamBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A9C1C7BF8E700A4F374 /* FeedStreamBO.swift */; };
+		67633A9F1C7BFF2300A4F374 /* FeedStreamDHProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633A9E1C7BFF2300A4F374 /* FeedStreamDHProtocol.swift */; };
+		67633AA11C7BFF4C00A4F374 /* FeedStreamBOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633AA01C7BFF4C00A4F374 /* FeedStreamBOProtocol.swift */; };
+		67633AA41C7C045B00A4F374 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633AA31C7C045B00A4F374 /* FeedItem.swift */; };
+		67633AA71C7C136900A4F374 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633AA61C7C136800A4F374 /* FeedCell.swift */; };
+		67633AA91C7C5A6500A4F374 /* FeedCellNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633AA81C7C5A6500A4F374 /* FeedCellNormal.swift */; };
+		67633AAB1C7C5F5200A4F374 /* NSObjectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633AAA1C7C5F5200A4F374 /* NSObjectEx.swift */; };
+		67633AAD1C7C626400A4F374 /* FeedCellUnknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633AAC1C7C626400A4F374 /* FeedCellUnknown.swift */; };
+		67633AAF1C7C8CBC00A4F374 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633AAE1C7C8CBC00A4F374 /* ServiceFactory.swift */; };
+		67633AB31C7C8D1600A4F374 /* FeedStreamServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633AB21C7C8D1600A4F374 /* FeedStreamServiceProtocol.swift */; };
+		67633AB51C7C912200A4F374 /* FeedStreamServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633AB41C7C912200A4F374 /* FeedStreamServiceImp.swift */; };
+		67633AB71C7C91B300A4F374 /* FeedStreamServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633AB61C7C91B300A4F374 /* FeedStreamServiceTest.swift */; };
+		67633ABA1C7C9A8400A4F374 /* FeedStreamServiceCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633AB91C7C9A8400A4F374 /* FeedStreamServiceCache.swift */; };
+		67633ABC1C7C9BD900A4F374 /* GitHubServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633ABB1C7C9BD900A4F374 /* GitHubServiceProtocol.swift */; };
+		67633ABE1C7C9BF900A4F374 /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633ABD1C7C9BF900A4F374 /* GitHubRepository.swift */; };
+		67633AC01C7C9C6900A4F374 /* GitHubServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67633ABF1C7C9C6900A4F374 /* GitHubServiceImp.swift */; };
+		E23B441975EB65A33E6BA68C /* Pods_TrimData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69E1DCB38A4F14B4D4FB645 /* Pods_TrimData.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67633A3D1C798C4500A4F374 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67633A1E1C798C4500A4F374 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67633A251C798C4500A4F374;
+			remoteInfo = TrimData;
+		};
+		67633A481C798C4500A4F374 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67633A1E1C798C4500A4F374 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67633A251C798C4500A4F374;
+			remoteInfo = TrimData;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67168AF91C7EDD2800273020 /* FeedItemNormal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemNormal.swift; sourceTree = "<group>"; };
+		67168AFD1C7EDE3E00273020 /* FeedCellGitHubRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCellGitHubRepo.swift; sourceTree = "<group>"; };
+		67168B001C7EDF4400273020 /* FeedItemGitHubRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemGitHubRepo.swift; sourceTree = "<group>"; };
+		67168B021C7EEEAC00273020 /* ObservableEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableEx.swift; sourceTree = "<group>"; };
+		67168B041C7FE7D300273020 /* LogEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEx.swift; sourceTree = "<group>"; };
+		67168B061C7FE9CD00273020 /* ObservableUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableUI.swift; sourceTree = "<group>"; };
+		67168B081C7FF80500273020 /* MemoryEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryEx.swift; sourceTree = "<group>"; };
+		67168B0A1C801CC000273020 /* DALFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DALFactory.swift; sourceTree = "<group>"; };
+		67168B0F1C801D8F00273020 /* GitHubDalProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubDalProtocol.swift; sourceTree = "<group>"; };
+		67168B111C801DAF00273020 /* GitHubDalImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubDalImp.swift; sourceTree = "<group>"; };
+		6722836E1C808B0E0048CBF8 /* SystemEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemEx.swift; sourceTree = "<group>"; };
+		672283701C80904A0048CBF8 /* DALImpBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DALImpBase.swift; sourceTree = "<group>"; };
+		672283721C8157540048CBF8 /* SQLiteEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteEx.swift; sourceTree = "<group>"; };
+		672283741C81639A0048CBF8 /* AppInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInitializer.swift; sourceTree = "<group>"; };
+		67425EBE1C7DB40E001EBE37 /* StringEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
+		67425EC21C7DB50B001EBE37 /* GitHubRepositoryRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryRequest.swift; sourceTree = "<group>"; };
+		67425EC51C7DB58C001EBE37 /* HttpRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequestManager.swift; sourceTree = "<group>"; };
+		67425EC71C7DB6DE001EBE37 /* GitHubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
+		67425EC91C7DB953001EBE37 /* GitHubAccountRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAccountRequest.swift; sourceTree = "<group>"; };
+		67425ECB1C7DD8EF001EBE37 /* GithubAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAccount.swift; sourceTree = "<group>"; };
+		67425ECD1C7DDB74001EBE37 /* GitHubServiceCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubServiceCache.swift; sourceTree = "<group>"; };
+		67425ECF1C7DE65A001EBE37 /* DataEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEvent.swift; sourceTree = "<group>"; };
+		67633A261C798C4500A4F374 /* Trim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67633A291C798C4500A4F374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		67633A2B1C798C4500A4F374 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		67633A2D1C798C4500A4F374 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		67633A301C798C4500A4F374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67633A321C798C4500A4F374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67633A351C798C4500A4F374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67633A371C798C4500A4F374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67633A3C1C798C4500A4F374 /* TrimDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrimDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67633A401C798C4500A4F374 /* TrimDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimDataTests.swift; sourceTree = "<group>"; };
+		67633A421C798C4500A4F374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67633A471C798C4500A4F374 /* TrimDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrimDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67633A4B1C798C4500A4F374 /* TrimDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimDataUITests.swift; sourceTree = "<group>"; };
+		67633A4D1C798C4500A4F374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67633A621C798EED00A4F374 /* TDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDViewController.swift; sourceTree = "<group>"; };
+		67633A801C7ABC9C00A4F374 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		67633A811C7ABC9C00A4F374 /* Icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-180.png"; sourceTree = "<group>"; };
+		67633A821C7ABC9C00A4F374 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		67633A861C7AD40C00A4F374 /* FeedStreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedStreamView.swift; sourceTree = "<group>"; };
+		67633A881C7AD42900A4F374 /* FeedStreamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedStreamController.swift; sourceTree = "<group>"; };
+		67633A8A1C7AD44A00A4F374 /* SettingListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingListController.swift; sourceTree = "<group>"; };
+		67633A8E1C7B04ED00A4F374 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		67633A8F1C7B04ED00A4F374 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		67633A901C7B04ED00A4F374 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		67633A981C7B4EC100A4F374 /* SettingListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingListView.swift; sourceTree = "<group>"; };
+		67633A9A1C7BF8CA00A4F374 /* FeedStreamDH.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedStreamDH.swift; sourceTree = "<group>"; };
+		67633A9C1C7BF8E700A4F374 /* FeedStreamBO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedStreamBO.swift; sourceTree = "<group>"; };
+		67633A9E1C7BFF2300A4F374 /* FeedStreamDHProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedStreamDHProtocol.swift; sourceTree = "<group>"; };
+		67633AA01C7BFF4C00A4F374 /* FeedStreamBOProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedStreamBOProtocol.swift; sourceTree = "<group>"; };
+		67633AA31C7C045B00A4F374 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		67633AA61C7C136800A4F374 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		67633AA81C7C5A6500A4F374 /* FeedCellNormal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCellNormal.swift; sourceTree = "<group>"; };
+		67633AAA1C7C5F5200A4F374 /* NSObjectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectEx.swift; sourceTree = "<group>"; };
+		67633AAC1C7C626400A4F374 /* FeedCellUnknown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCellUnknown.swift; sourceTree = "<group>"; };
+		67633AAE1C7C8CBC00A4F374 /* ServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		67633AB21C7C8D1600A4F374 /* FeedStreamServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedStreamServiceProtocol.swift; sourceTree = "<group>"; };
+		67633AB41C7C912200A4F374 /* FeedStreamServiceImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedStreamServiceImp.swift; sourceTree = "<group>"; };
+		67633AB61C7C91B300A4F374 /* FeedStreamServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedStreamServiceTest.swift; sourceTree = "<group>"; };
+		67633AB91C7C9A8400A4F374 /* FeedStreamServiceCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedStreamServiceCache.swift; sourceTree = "<group>"; };
+		67633ABB1C7C9BD900A4F374 /* GitHubServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubServiceProtocol.swift; sourceTree = "<group>"; };
+		67633ABD1C7C9BF900A4F374 /* GitHubRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		67633ABF1C7C9C6900A4F374 /* GitHubServiceImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubServiceImp.swift; sourceTree = "<group>"; };
+		715B3E1C7CF75BF84A08357F /* Pods-TrimData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrimData.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrimData/Pods-TrimData.release.xcconfig"; sourceTree = "<group>"; };
+		7555CABAAE3577ECAAC248F0 /* Pods-TrimData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrimData.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrimData/Pods-TrimData.debug.xcconfig"; sourceTree = "<group>"; };
+		C69E1DCB38A4F14B4D4FB645 /* Pods_TrimData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrimData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67633A231C798C4500A4F374 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E23B441975EB65A33E6BA68C /* Pods_TrimData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67633A391C798C4500A4F374 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67633A441C798C4500A4F374 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44FF5C7DF0223B71E4532DF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7555CABAAE3577ECAAC248F0 /* Pods-TrimData.debug.xcconfig */,
+				715B3E1C7CF75BF84A08357F /* Pods-TrimData.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		67168AFF1C7EDEC100273020 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = GitHub;
+			sourceTree = "<group>";
+		};
+		67168B0C1C801D4F00273020 /* IMP */ = {
+			isa = PBXGroup;
+			children = (
+				67168B111C801DAF00273020 /* GitHubDalImp.swift */,
+			);
+			name = IMP;
+			sourceTree = "<group>";
+		};
+		67425EC01C7DB4E2001EBE37 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				67425EC51C7DB58C001EBE37 /* HttpRequestManager.swift */,
+				67425EC11C7DB4ED001EBE37 /* GitHub */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		67425EC11C7DB4ED001EBE37 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				67425EC71C7DB6DE001EBE37 /* GitHubRequest.swift */,
+				67425EC21C7DB50B001EBE37 /* GitHubRepositoryRequest.swift */,
+				67425EC91C7DB953001EBE37 /* GitHubAccountRequest.swift */,
+			);
+			name = GitHub;
+			sourceTree = "<group>";
+		};
+		67633A1D1C798C4500A4F374 = {
+			isa = PBXGroup;
+			children = (
+				67633A281C798C4500A4F374 /* TrimData */,
+				67633A3F1C798C4500A4F374 /* TrimDataTests */,
+				67633A4A1C798C4500A4F374 /* TrimDataUITests */,
+				67633A271C798C4500A4F374 /* Products */,
+				44FF5C7DF0223B71E4532DF3 /* Pods */,
+				7A3B3F92706C75E196CF2351 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		67633A271C798C4500A4F374 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67633A261C798C4500A4F374 /* Trim.app */,
+				67633A3C1C798C4500A4F374 /* TrimDataTests.xctest */,
+				67633A471C798C4500A4F374 /* TrimDataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67633A281C798C4500A4F374 /* TrimData */ = {
+			isa = PBXGroup;
+			children = (
+				67633A5C1C798E0800A4F374 /* Common */,
+				67633A5E1C798EB300A4F374 /* Controller */,
+				67633A5B1C798CC400A4F374 /* Service */,
+				67633A5A1C798CC400A4F374 /* DAL */,
+				67633A291C798C4500A4F374 /* AppDelegate.swift */,
+				672283741C81639A0048CBF8 /* AppInitializer.swift */,
+				67633A2B1C798C4500A4F374 /* FirstViewController.swift */,
+				67633A2D1C798C4500A4F374 /* SecondViewController.swift */,
+				67633A2F1C798C4500A4F374 /* Main.storyboard */,
+				67633A321C798C4500A4F374 /* Assets.xcassets */,
+				67633A341C798C4500A4F374 /* LaunchScreen.storyboard */,
+				67633A371C798C4500A4F374 /* Info.plist */,
+				67633A7E1C7AB9F600A4F374 /* Resources */,
+			);
+			path = TrimData;
+			sourceTree = "<group>";
+		};
+		67633A3F1C798C4500A4F374 /* TrimDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				67633A401C798C4500A4F374 /* TrimDataTests.swift */,
+				67633A421C798C4500A4F374 /* Info.plist */,
+			);
+			path = TrimDataTests;
+			sourceTree = "<group>";
+		};
+		67633A4A1C798C4500A4F374 /* TrimDataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				67633A4B1C798C4500A4F374 /* TrimDataUITests.swift */,
+				67633A4D1C798C4500A4F374 /* Info.plist */,
+			);
+			path = TrimDataUITests;
+			sourceTree = "<group>";
+		};
+		67633A5A1C798CC400A4F374 /* DAL */ = {
+			isa = PBXGroup;
+			children = (
+				67425ECF1C7DE65A001EBE37 /* DataEvent.swift */,
+				67633AA21C7C03FB00A4F374 /* Model */,
+				67168B0C1C801D4F00273020 /* IMP */,
+				67168B0A1C801CC000273020 /* DALFactory.swift */,
+				672283701C80904A0048CBF8 /* DALImpBase.swift */,
+				67168B0F1C801D8F00273020 /* GitHubDalProtocol.swift */,
+			);
+			path = DAL;
+			sourceTree = "<group>";
+		};
+		67633A5B1C798CC400A4F374 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				67425EC01C7DB4E2001EBE37 /* Network */,
+				67633AB81C7C9A7300A4F374 /* Cache */,
+				67633AB11C7C8CF800A4F374 /* Test */,
+				67633AB01C7C8CEE00A4F374 /* IMP */,
+				67633AAE1C7C8CBC00A4F374 /* ServiceFactory.swift */,
+				67633AB21C7C8D1600A4F374 /* FeedStreamServiceProtocol.swift */,
+				67633ABB1C7C9BD900A4F374 /* GitHubServiceProtocol.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		67633A5C1C798E0800A4F374 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				67633A8C1C7B04ED00A4F374 /* PPKit */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		67633A5E1C798EB300A4F374 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				67633A5F1C798EB300A4F374 /* Base */,
+				67633A661C7990C900A4F374 /* Feed */,
+				67633A671C7990C900A4F374 /* Setting */,
+				67633A701C7991BB00A4F374 /* 3rdParty */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		67633A5F1C798EB300A4F374 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				67633A621C798EED00A4F374 /* TDViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		67633A661C7990C900A4F374 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				67633A6A1C79910800A4F374 /* FeedStream */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		67633A671C7990C900A4F374 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				67633A6B1C79913400A4F374 /* SettingList */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		67633A6A1C79910800A4F374 /* FeedStream */ = {
+			isa = PBXGroup;
+			children = (
+				67633A751C79A61700A4F374 /* View */,
+				67633A771C79A62400A4F374 /* Model */,
+				67633A761C79A61D00A4F374 /* Protocol */,
+				67633A881C7AD42900A4F374 /* FeedStreamController.swift */,
+				67633A9A1C7BF8CA00A4F374 /* FeedStreamDH.swift */,
+				67633A9C1C7BF8E700A4F374 /* FeedStreamBO.swift */,
+			);
+			name = FeedStream;
+			sourceTree = "<group>";
+		};
+		67633A6B1C79913400A4F374 /* SettingList */ = {
+			isa = PBXGroup;
+			children = (
+				67633A951C7B397C00A4F374 /* View */,
+				67633A961C7B398200A4F374 /* Model */,
+				67633A971C7B398800A4F374 /* Protocol */,
+				67633A8A1C7AD44A00A4F374 /* SettingListController.swift */,
+			);
+			name = SettingList;
+			sourceTree = "<group>";
+		};
+		67633A701C7991BB00A4F374 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				67633A741C79933900A4F374 /* PluginBase */,
+				67168AFF1C7EDEC100273020 /* GitHub */,
+				67633A731C7991E600A4F374 /* Wechat */,
+				67633A711C7991C500A4F374 /* Weibo */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		67633A711C7991C500A4F374 /* Weibo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Weibo;
+			sourceTree = "<group>";
+		};
+		67633A721C7991D800A4F374 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				67633ABD1C7C9BF900A4F374 /* GitHubRepository.swift */,
+				67425ECB1C7DD8EF001EBE37 /* GithubAccount.swift */,
+			);
+			name = GitHub;
+			path = ../Controller/3rdParty;
+			sourceTree = "<group>";
+		};
+		67633A731C7991E600A4F374 /* Wechat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Wechat;
+			sourceTree = "<group>";
+		};
+		67633A741C79933900A4F374 /* PluginBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PluginBase;
+			sourceTree = "<group>";
+		};
+		67633A751C79A61700A4F374 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67633AA51C7C135100A4F374 /* Cells */,
+				67633A861C7AD40C00A4F374 /* FeedStreamView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		67633A761C79A61D00A4F374 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				67633A9E1C7BFF2300A4F374 /* FeedStreamDHProtocol.swift */,
+				67633AA01C7BFF4C00A4F374 /* FeedStreamBOProtocol.swift */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		67633A771C79A62400A4F374 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67633AA31C7C045B00A4F374 /* FeedItem.swift */,
+				67168AF91C7EDD2800273020 /* FeedItemNormal.swift */,
+				67168B001C7EDF4400273020 /* FeedItemGitHubRepo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		67633A7E1C7AB9F600A4F374 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				67633A7F1C7ABA0C00A4F374 /* Icons */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		67633A7F1C7ABA0C00A4F374 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				67633A801C7ABC9C00A4F374 /* Icon-120.png */,
+				67633A811C7ABC9C00A4F374 /* Icon-180.png */,
+				67633A821C7ABC9C00A4F374 /* Icon.png */,
+			);
+			name = Icons;
+			path = icons;
+			sourceTree = "<group>";
+		};
+		67633A8C1C7B04ED00A4F374 /* PPKit */ = {
+			isa = PBXGroup;
+			children = (
+				67633A941C7B054600A4F374 /* Swift */,
+				67633A8D1C7B04ED00A4F374 /* CDD */,
+			);
+			path = PPKit;
+			sourceTree = "<group>";
+		};
+		67633A8D1C7B04ED00A4F374 /* CDD */ = {
+			isa = PBXGroup;
+			children = (
+				67633A8E1C7B04ED00A4F374 /* Context.swift */,
+				67633A8F1C7B04ED00A4F374 /* Object.swift */,
+				67633A901C7B04ED00A4F374 /* UIView.swift */,
+			);
+			path = CDD;
+			sourceTree = "<group>";
+		};
+		67633A941C7B054600A4F374 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				67633AAA1C7C5F5200A4F374 /* NSObjectEx.swift */,
+				67425EBE1C7DB40E001EBE37 /* StringEx.swift */,
+				67168B021C7EEEAC00273020 /* ObservableEx.swift */,
+				67168B061C7FE9CD00273020 /* ObservableUI.swift */,
+				67168B041C7FE7D300273020 /* LogEx.swift */,
+				67168B081C7FF80500273020 /* MemoryEx.swift */,
+				6722836E1C808B0E0048CBF8 /* SystemEx.swift */,
+				672283721C8157540048CBF8 /* SQLiteEx.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		67633A951C7B397C00A4F374 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67633A981C7B4EC100A4F374 /* SettingListView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		67633A961C7B398200A4F374 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		67633A971C7B398800A4F374 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		67633AA21C7C03FB00A4F374 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67633A721C7991D800A4F374 /* GitHub */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		67633AA51C7C135100A4F374 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				67633AA61C7C136800A4F374 /* FeedCell.swift */,
+				67633AA81C7C5A6500A4F374 /* FeedCellNormal.swift */,
+				67168AFD1C7EDE3E00273020 /* FeedCellGitHubRepo.swift */,
+				67633AAC1C7C626400A4F374 /* FeedCellUnknown.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		67633AB01C7C8CEE00A4F374 /* IMP */ = {
+			isa = PBXGroup;
+			children = (
+				67633AB41C7C912200A4F374 /* FeedStreamServiceImp.swift */,
+				67633ABF1C7C9C6900A4F374 /* GitHubServiceImp.swift */,
+			);
+			name = IMP;
+			sourceTree = "<group>";
+		};
+		67633AB11C7C8CF800A4F374 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				67633AB61C7C91B300A4F374 /* FeedStreamServiceTest.swift */,
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
+		67633AB81C7C9A7300A4F374 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				67633AB91C7C9A8400A4F374 /* FeedStreamServiceCache.swift */,
+				67425ECD1C7DDB74001EBE37 /* GitHubServiceCache.swift */,
+			);
+			name = Cache;
+			sourceTree = "<group>";
+		};
+		7A3B3F92706C75E196CF2351 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C69E1DCB38A4F14B4D4FB645 /* Pods_TrimData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67633A251C798C4500A4F374 /* TrimData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67633A501C798C4500A4F374 /* Build configuration list for PBXNativeTarget "TrimData" */;
+			buildPhases = (
+				189D491C19E4FBD87451D954 /* Check Pods Manifest.lock */,
+				67633A221C798C4500A4F374 /* Sources */,
+				67633A231C798C4500A4F374 /* Frameworks */,
+				67633A241C798C4500A4F374 /* Resources */,
+				27AA460605ED947C98389AF5 /* Embed Pods Frameworks */,
+				37575F45DD8003BDA031B53A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrimData;
+			productName = TrimData;
+			productReference = 67633A261C798C4500A4F374 /* Trim.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67633A3B1C798C4500A4F374 /* TrimDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67633A531C798C4500A4F374 /* Build configuration list for PBXNativeTarget "TrimDataTests" */;
+			buildPhases = (
+				67633A381C798C4500A4F374 /* Sources */,
+				67633A391C798C4500A4F374 /* Frameworks */,
+				67633A3A1C798C4500A4F374 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67633A3E1C798C4500A4F374 /* PBXTargetDependency */,
+			);
+			name = TrimDataTests;
+			productName = TrimDataTests;
+			productReference = 67633A3C1C798C4500A4F374 /* TrimDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		67633A461C798C4500A4F374 /* TrimDataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67633A561C798C4500A4F374 /* Build configuration list for PBXNativeTarget "TrimDataUITests" */;
+			buildPhases = (
+				67633A431C798C4500A4F374 /* Sources */,
+				67633A441C798C4500A4F374 /* Frameworks */,
+				67633A451C798C4500A4F374 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67633A491C798C4500A4F374 /* PBXTargetDependency */,
+			);
+			name = TrimDataUITests;
+			productName = TrimDataUITests;
+			productReference = 67633A471C798C4500A4F374 /* TrimDataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67633A1E1C798C4500A4F374 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "gao feng";
+				TargetAttributes = {
+					67633A251C798C4500A4F374 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					67633A3B1C798C4500A4F374 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 67633A251C798C4500A4F374;
+					};
+					67633A461C798C4500A4F374 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 67633A251C798C4500A4F374;
+					};
+				};
+			};
+			buildConfigurationList = 67633A211C798C4500A4F374 /* Build configuration list for PBXProject "TrimData" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67633A1D1C798C4500A4F374;
+			productRefGroup = 67633A271C798C4500A4F374 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67633A251C798C4500A4F374 /* TrimData */,
+				67633A3B1C798C4500A4F374 /* TrimDataTests */,
+				67633A461C798C4500A4F374 /* TrimDataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67633A241C798C4500A4F374 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67633A851C7ABC9C00A4F374 /* Icon.png in Resources */,
+				67633A831C7ABC9C00A4F374 /* Icon-120.png in Resources */,
+				67633A361C798C4500A4F374 /* LaunchScreen.storyboard in Resources */,
+				67633A331C798C4500A4F374 /* Assets.xcassets in Resources */,
+				67633A841C7ABC9C00A4F374 /* Icon-180.png in Resources */,
+				67633A311C798C4500A4F374 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67633A3A1C798C4500A4F374 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67633A451C798C4500A4F374 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		189D491C19E4FBD87451D954 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		27AA460605ED947C98389AF5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrimData/Pods-TrimData-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37575F45DD8003BDA031B53A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrimData/Pods-TrimData-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67633A221C798C4500A4F374 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67425ECA1C7DB953001EBE37 /* GitHubAccountRequest.swift in Sources */,
+				67633A931C7B04ED00A4F374 /* UIView.swift in Sources */,
+				672283751C81639A0048CBF8 /* AppInitializer.swift in Sources */,
+				67633A871C7AD40C00A4F374 /* FeedStreamView.swift in Sources */,
+				672283731C8157540048CBF8 /* SQLiteEx.swift in Sources */,
+				67633ABA1C7C9A8400A4F374 /* FeedStreamServiceCache.swift in Sources */,
+				67168B0B1C801CC000273020 /* DALFactory.swift in Sources */,
+				67633ABE1C7C9BF900A4F374 /* GitHubRepository.swift in Sources */,
+				67425EC31C7DB50B001EBE37 /* GitHubRepositoryRequest.swift in Sources */,
+				67425ED01C7DE65A001EBE37 /* DataEvent.swift in Sources */,
+				67633AA71C7C136900A4F374 /* FeedCell.swift in Sources */,
+				67633ABC1C7C9BD900A4F374 /* GitHubServiceProtocol.swift in Sources */,
+				67633A631C798EED00A4F374 /* TDViewController.swift in Sources */,
+				67425ECE1C7DDB74001EBE37 /* GitHubServiceCache.swift in Sources */,
+				67633AC01C7C9C6900A4F374 /* GitHubServiceImp.swift in Sources */,
+				67633AAD1C7C626400A4F374 /* FeedCellUnknown.swift in Sources */,
+				67168B101C801D8F00273020 /* GitHubDalProtocol.swift in Sources */,
+				67633A9D1C7BF8E700A4F374 /* FeedStreamBO.swift in Sources */,
+				67168B051C7FE7D300273020 /* LogEx.swift in Sources */,
+				6722836F1C808B0E0048CBF8 /* SystemEx.swift in Sources */,
+				67633A2E1C798C4500A4F374 /* SecondViewController.swift in Sources */,
+				67633AB71C7C91B300A4F374 /* FeedStreamServiceTest.swift in Sources */,
+				67168AFE1C7EDE3E00273020 /* FeedCellGitHubRepo.swift in Sources */,
+				67633A2A1C798C4500A4F374 /* AppDelegate.swift in Sources */,
+				67633A921C7B04ED00A4F374 /* Object.swift in Sources */,
+				67168AFA1C7EDD2800273020 /* FeedItemNormal.swift in Sources */,
+				67425EBF1C7DB40E001EBE37 /* StringEx.swift in Sources */,
+				67633AA91C7C5A6500A4F374 /* FeedCellNormal.swift in Sources */,
+				67633A9B1C7BF8CA00A4F374 /* FeedStreamDH.swift in Sources */,
+				67168B071C7FE9CD00273020 /* ObservableUI.swift in Sources */,
+				67168B091C7FF80500273020 /* MemoryEx.swift in Sources */,
+				67633AAF1C7C8CBC00A4F374 /* ServiceFactory.swift in Sources */,
+				67633A8B1C7AD44A00A4F374 /* SettingListController.swift in Sources */,
+				67633AB31C7C8D1600A4F374 /* FeedStreamServiceProtocol.swift in Sources */,
+				67168B121C801DAF00273020 /* GitHubDalImp.swift in Sources */,
+				67633AB51C7C912200A4F374 /* FeedStreamServiceImp.swift in Sources */,
+				67633A911C7B04ED00A4F374 /* Context.swift in Sources */,
+				67168B031C7EEEAC00273020 /* ObservableEx.swift in Sources */,
+				67425ECC1C7DD8EF001EBE37 /* GithubAccount.swift in Sources */,
+				67633A991C7B4EC100A4F374 /* SettingListView.swift in Sources */,
+				67633AA11C7BFF4C00A4F374 /* FeedStreamBOProtocol.swift in Sources */,
+				67633AA41C7C045B00A4F374 /* FeedItem.swift in Sources */,
+				67425EC81C7DB6DE001EBE37 /* GitHubRequest.swift in Sources */,
+				67633A891C7AD42900A4F374 /* FeedStreamController.swift in Sources */,
+				67633AAB1C7C5F5200A4F374 /* NSObjectEx.swift in Sources */,
+				67425EC61C7DB58C001EBE37 /* HttpRequestManager.swift in Sources */,
+				67633A2C1C798C4500A4F374 /* FirstViewController.swift in Sources */,
+				672283711C80904A0048CBF8 /* DALImpBase.swift in Sources */,
+				67633A9F1C7BFF2300A4F374 /* FeedStreamDHProtocol.swift in Sources */,
+				67168B011C7EDF4400273020 /* FeedItemGitHubRepo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67633A381C798C4500A4F374 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67633A411C798C4500A4F374 /* TrimDataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67633A431C798C4500A4F374 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67633A4C1C798C4500A4F374 /* TrimDataUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67633A3E1C798C4500A4F374 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67633A251C798C4500A4F374 /* TrimData */;
+			targetProxy = 67633A3D1C798C4500A4F374 /* PBXContainerItemProxy */;
+		};
+		67633A491C798C4500A4F374 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67633A251C798C4500A4F374 /* TrimData */;
+			targetProxy = 67633A481C798C4500A4F374 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		67633A2F1C798C4500A4F374 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67633A301C798C4500A4F374 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		67633A341C798C4500A4F374 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67633A351C798C4500A4F374 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67633A4E1C798C4500A4F374 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67633A4F1C798C4500A4F374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67633A511C798C4500A4F374 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7555CABAAE3577ECAAC248F0 /* Pods-TrimData.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TrimData/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.TrimData;
+				PRODUCT_NAME = Trim;
+			};
+			name = Debug;
+		};
+		67633A521C798C4500A4F374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 715B3E1C7CF75BF84A08357F /* Pods-TrimData.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TrimData/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.TrimData;
+				PRODUCT_NAME = Trim;
+			};
+			name = Release;
+		};
+		67633A541C798C4500A4F374 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TrimDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.TrimDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrimData.app/TrimData";
+			};
+			name = Debug;
+		};
+		67633A551C798C4500A4F374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TrimDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.TrimDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrimData.app/TrimData";
+			};
+			name = Release;
+		};
+		67633A571C798C4500A4F374 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TrimDataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.TrimDataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TrimData;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		67633A581C798C4500A4F374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TrimDataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.TrimDataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TrimData;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67633A211C798C4500A4F374 /* Build configuration list for PBXProject "TrimData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67633A4E1C798C4500A4F374 /* Debug */,
+				67633A4F1C798C4500A4F374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67633A501C798C4500A4F374 /* Build configuration list for PBXNativeTarget "TrimData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67633A511C798C4500A4F374 /* Debug */,
+				67633A521C798C4500A4F374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67633A531C798C4500A4F374 /* Build configuration list for PBXNativeTarget "TrimDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67633A541C798C4500A4F374 /* Debug */,
+				67633A551C798C4500A4F374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67633A561C798C4500A4F374 /* Build configuration list for PBXNativeTarget "TrimDataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67633A571C798C4500A4F374 /* Debug */,
+				67633A581C798C4500A4F374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67633A1E1C798C4500A4F374 /* Project object */;
+}

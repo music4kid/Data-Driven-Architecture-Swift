@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (3.2.0)
+  - Kingfisher (1.8.5)
+  - Observable-Swift (0.5.0)
+  - PKHUD (2.2.5)
+  - SnapKit (0.18.0)
+  - SQLite.swift (0.9.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - Kingfisher (~> 1.8.2)
+  - Observable-Swift (~> 0.5.0)
+  - PKHUD (~> 2.2.5)
+  - SnapKit (~> 0.18.0)
+  - SQLite.swift (~> 0.9.2)
+
+SPEC CHECKSUMS:
+  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  Kingfisher: 780fed0fa82692a3bd59d53329ae2b85cdd354a5
+  Observable-Swift: aecd04920b22e890f528d42f557c51c525ca79ee
+  PKHUD: 15d9db01fb008bb9247c6d785c585f587955b113
+  SnapKit: e1f090a6d47b1dd4bd89b73f72b6746a7835ef3c
+  SQLite.swift: 5dca22dbf6634fdb9c3270fae9491830804e9b2d
+
+COCOAPODS: 0.39.0
