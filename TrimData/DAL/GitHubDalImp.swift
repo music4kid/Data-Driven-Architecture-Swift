@@ -67,6 +67,8 @@ class GitHubDalImp: DALImpBase, GitHubDalProtocol {
                     repo_fork <- repo.fork~,
                     repo_openIssue <- repo.openIssue~
                     ))
+                
+                _Event.githubEvent.update.notify(repo)
             }
             else {
                 try db.run(tableRepo.insert(
@@ -76,6 +78,8 @@ class GitHubDalImp: DALImpBase, GitHubDalProtocol {
                     repo_fork <- repo.fork~,
                     repo_openIssue <- repo.openIssue~
                     ))
+                
+                _Event.githubEvent.insert.notify(repo)
             }
         } catch {
             log("saveRepo err")

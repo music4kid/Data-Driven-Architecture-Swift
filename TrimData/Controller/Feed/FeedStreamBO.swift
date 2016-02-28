@@ -31,6 +31,8 @@ class FeedStreamBO: CDD.BusinessObject, FeedStreamBOProtocol {
         _Event.register(self, event: _Event.githubEvent.update) { (repo: GitHubRepository) -> () in
            //feed item update is triggered by property observer, stop loading UI only
             self.boDelegate?.stopLoadingUI()
+            
+            //if no property binding implemented, custom property assignment is required
         }
     }
     

@@ -21,6 +21,7 @@
 		672283711C80904A0048CBF8 /* DALImpBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672283701C80904A0048CBF8 /* DALImpBase.swift */; };
 		672283731C8157540048CBF8 /* SQLiteEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672283721C8157540048CBF8 /* SQLiteEx.swift */; };
 		672283751C81639A0048CBF8 /* AppInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672283741C81639A0048CBF8 /* AppInitializer.swift */; };
+		672283771C82B3400048CBF8 /* GitHubServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672283761C82B3400048CBF8 /* GitHubServiceTest.swift */; };
 		67425EBF1C7DB40E001EBE37 /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425EBE1C7DB40E001EBE37 /* StringEx.swift */; };
 		67425EC31C7DB50B001EBE37 /* GitHubRepositoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425EC21C7DB50B001EBE37 /* GitHubRepositoryRequest.swift */; };
 		67425EC61C7DB58C001EBE37 /* HttpRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67425EC51C7DB58C001EBE37 /* HttpRequestManager.swift */; };
@@ -100,6 +101,7 @@
 		672283701C80904A0048CBF8 /* DALImpBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DALImpBase.swift; sourceTree = "<group>"; };
 		672283721C8157540048CBF8 /* SQLiteEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteEx.swift; sourceTree = "<group>"; };
 		672283741C81639A0048CBF8 /* AppInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInitializer.swift; sourceTree = "<group>"; };
+		672283761C82B3400048CBF8 /* GitHubServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubServiceTest.swift; sourceTree = "<group>"; };
 		67425EBE1C7DB40E001EBE37 /* StringEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
 		67425EC21C7DB50B001EBE37 /* GitHubRepositoryRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryRequest.swift; sourceTree = "<group>"; };
 		67425EC51C7DB58C001EBE37 /* HttpRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequestManager.swift; sourceTree = "<group>"; };
@@ -301,8 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				67425EC01C7DB4E2001EBE37 /* Network */,
-				67633AB81C7C9A7300A4F374 /* Cache */,
 				67633AB11C7C8CF800A4F374 /* Test */,
+				67633AB81C7C9A7300A4F374 /* Cache */,
 				67633AB01C7C8CEE00A4F374 /* IMP */,
 				67633AAE1C7C8CBC00A4F374 /* ServiceFactory.swift */,
 				67633AB21C7C8D1600A4F374 /* FeedStreamServiceProtocol.swift */,
@@ -555,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				67633AB61C7C91B300A4F374 /* FeedStreamServiceTest.swift */,
+				672283761C82B3400048CBF8 /* GitHubServiceTest.swift */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -788,6 +791,7 @@
 				67633A921C7B04ED00A4F374 /* Object.swift in Sources */,
 				67168AFA1C7EDD2800273020 /* FeedItemNormal.swift in Sources */,
 				67425EBF1C7DB40E001EBE37 /* StringEx.swift in Sources */,
+				672283771C82B3400048CBF8 /* GitHubServiceTest.swift in Sources */,
 				67633AA91C7C5A6500A4F374 /* FeedCellNormal.swift in Sources */,
 				67633A9B1C7BF8CA00A4F374 /* FeedStreamDH.swift in Sources */,
 				67168B071C7FE9CD00273020 /* ObservableUI.swift in Sources */,

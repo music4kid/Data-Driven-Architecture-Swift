@@ -55,13 +55,11 @@ class GitHubServiceImp: NSObject, GitHubServiceProtocol {
     //MARK: models logic
     func updateOrInsertGitHubRepository(repo: GitHubRepository) {
         if let eRepo = _Service.githubService.getGitHubRepositoryById(repo.id^) {
-            //update, trigger update event
+            //property update
             eRepo.name ^= repo.name^
             eRepo.star ^= repo.star^
             eRepo.fork ^= repo.fork^
             eRepo.openIssue ^= repo.openIssue^
-            
-            _Event.githubEvent.update.notify(eRepo)
             
             //save to db
             _DAL.writeTaskOnDBQueue(true, task: { () -> () in
@@ -70,9 +68,7 @@ class GitHubServiceImp: NSObject, GitHubServiceProtocol {
             
         }
         else {
-            //insert, trigger insert event
-            _Event.githubEvent.insert.notify(repo)
-            
+           
             //save to db
             _DAL.writeTaskOnDBQueue(true, task: { () -> () in
                 _DAL.gitHubDal.saveRepo(repo)
