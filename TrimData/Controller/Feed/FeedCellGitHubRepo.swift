@@ -16,7 +16,7 @@ class FeedCellGitHubRepo: FeedCell {
     var lbStar = UILabel()
     var lbFork = UILabel()
     
-    override class func fillCellData(feedItem: FeedItem) {
+    override class func fillCellData(_ feedItem: FeedItem) {
         feedItem.displayHeight = 80
     }
     
@@ -32,31 +32,31 @@ class FeedCellGitHubRepo: FeedCell {
     }
     
     func initUIElements() {
-        lbName.textColor = UIColor.blackColor()
-        lbName.backgroundColor = UIColor.clearColor()
-        lbName.font = UIFont.boldSystemFontOfSize(14)
-        lbName.textAlignment = NSTextAlignment.Left
+        lbName.textColor = UIColor.black
+        lbName.backgroundColor = UIColor.clear
+        lbName.font = UIFont.boldSystemFont(ofSize: 14)
+        lbName.textAlignment = .left
         contentView.addSubview(lbName)
         
      
-        lbOpenIssue.textColor = UIColor.blackColor()
-        lbOpenIssue.backgroundColor = UIColor.clearColor()
-        lbOpenIssue.font = UIFont.systemFontOfSize(14)
-        lbOpenIssue.textAlignment = NSTextAlignment.Left
+        lbOpenIssue.textColor = UIColor.black
+        lbOpenIssue.backgroundColor = UIColor.clear
+        lbOpenIssue.font = UIFont.systemFont(ofSize: 14)
+        lbOpenIssue.textAlignment = .left
         contentView.addSubview(lbOpenIssue)
         
         
-        lbStar.textColor = UIColor.blackColor()
-        lbStar.backgroundColor = UIColor.clearColor()
-        lbStar.font = UIFont.systemFontOfSize(14)
-        lbStar.textAlignment = NSTextAlignment.Left
+        lbStar.textColor = UIColor.black
+        lbStar.backgroundColor = UIColor.clear
+        lbStar.font = UIFont.systemFont(ofSize: 14)
+        lbStar.textAlignment = .left
         contentView.addSubview(lbStar)
         
         
-        lbFork.textColor = UIColor.blackColor()
-        lbFork.backgroundColor = UIColor.clearColor()
-        lbFork.font = UIFont.systemFontOfSize(14)
-        lbFork.textAlignment = NSTextAlignment.Left
+        lbFork.textColor = UIColor.black
+        lbFork.backgroundColor = UIColor.clear
+        lbFork.font = UIFont.systemFont(ofSize: 14)
+        lbFork.textAlignment = .left
         contentView.addSubview(lbFork)
     }
     
@@ -64,34 +64,34 @@ class FeedCellGitHubRepo: FeedCell {
         let marginX = 20.0
         let marginY = 4.0
         
-        lbName.snp_makeConstraints { (make) -> Void in
+        lbName.snp.makeConstraints { (make) in
             make.top.equalTo(marginY)
             make.left.equalTo(marginX);
             make.width.equalTo(contentView)
             make.height.equalTo(15)
         }
         
-        lbOpenIssue.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(lbName.snp_bottom).offset(4)
+        lbOpenIssue.snp.makeConstraints { (make) in
+            make.top.equalTo(lbName.snp.bottom).offset(4)
             make.left.equalTo(lbName);
             make.height.equalTo(15)
         }
         
-        lbStar.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(lbOpenIssue.snp_bottom).offset(4)
+        lbStar.snp.makeConstraints { (make) in
+            make.top.equalTo(lbOpenIssue.snp.bottom).offset(4)
             make.left.equalTo(lbName);
             make.height.equalTo(15)
         }
         
-        lbFork.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(lbStar.snp_bottom).offset(4)
+        lbFork.snp.makeConstraints { (make) in
+            make.top.equalTo(lbStar.snp.bottom).offset(4)
             make.left.equalTo(lbName);
             make.height.equalTo(15)
         }
     }
     
     //data binding only, no custom logic
-    override func configCellWithItem(item: FeedItem) {
+    override func configCellWithItem(_ item: FeedItem) {
         
         if let repo = item as? FeedItemGitHubRepo {
         

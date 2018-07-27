@@ -16,12 +16,12 @@ class FeedCell: UITableViewCell {
     
     //tmp hack, base class should know nothing about its subclass
     internal static func prepareFeedCell() {
-        cellMap[String(FeedItemType.FeedItemNormal)] = FeedCellNormal.self
-        cellMap[String(FeedItemType.FeedItemGitHubRepo)] = FeedCellGitHubRepo.self
+        cellMap[FeedItemType.feedItemNormal.str] = FeedCellNormal.self
+        cellMap[FeedItemType.feedItemGitHubRepo.str] = FeedCellGitHubRepo.self
     }
     
-    internal static func getCellClassForItemType(itemType: FeedItemType) -> AnyClass? {
-        return cellMap[String(itemType)]
+    internal static func getCellClassForItemType(_ itemType: FeedItemType) -> AnyClass? {
+        return cellMap[itemType.str]
     }
     
     //MARK: cell Util
@@ -31,8 +31,8 @@ class FeedCell: UITableViewCell {
         
         (cellClass as! FeedCell.Type).fillCellData(feedItem)
     }
-    class func fillCellData(feedItem: FeedItem) {
-        
+    class func fillCellData(_ feedItem: FeedItem) {
+         
     }
     
     
@@ -46,7 +46,7 @@ class FeedCell: UITableViewCell {
             bottomLine = UILabel()
             bottomLine?.backgroundColor = UIColor(white: 0.8, alpha: 1.0)
             self.contentView.addSubview(bottomLine!)
-            bottomLine?.snp_makeConstraints(closure: { (make) -> Void in
+            bottomLine?.snp.makeConstraints({ (make) -> Void in
                 make.left.equalTo(0)
                 make.bottom.equalTo(self.contentView)
                 make.width.equalTo(self.contentView)
@@ -59,7 +59,7 @@ class FeedCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
-    internal func configCellWithItem(item: FeedItem) {
+    internal func configCellWithItem(_ item: FeedItem) {
         
     }
 }

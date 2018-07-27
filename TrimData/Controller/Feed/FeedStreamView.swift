@@ -23,7 +23,7 @@ class FeedStreamView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
 
     internal func initFeedView() {
-        backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor.white
         
         PKHUD.sharedHUD.dimsBackground = false
     
@@ -33,18 +33,18 @@ class FeedStreamView: UIView, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        tableView.separatorStyle = .none
         
         //init pull refresh
         refreshCtrl = UIRefreshControl()
         refreshCtrl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshCtrl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        refreshCtrl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         self.tableView.addSubview(refreshCtrl)
         
         //bind data event 
         let dh = context?.dataHandler as! FeedStreamDHProtocol
         
-        dh.getFeedItemDataEvent().register(self, event: dh.getFeedItemDataEvent().refresh) { (item: FeedItem) -> () in
+        dh.getFeedItemDataEvent().register(self, event: dh.getFeedItemDataEvent().refresh) { (item: FeedItem) -> Void in
             self.tableView.reloadData()
 
             self.hideRefresh()
@@ -53,30 +53,30 @@ class FeedStreamView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
  
     //MARK: UITableViewDataSource
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let dh = context?.dataHandler as! FeedStreamDHProtocol
         let feedItems = dh.getFeedItems()
         
         return feedItems.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let dh = context?.dataHandler as! FeedStreamDHProtocol
         let feedItems = dh.getFeedItems()
         let item: FeedItem = feedItems[indexPath.row]
         
-        let cellIdentifier = "feed_cellIdentifier_\(String(item.itemType))"
+        let cellIdentifier = "feed_cellIdentifier_\(item.itemType)"
         let cellClass = FeedCell.getCellClassForItemType(item.itemType) as? FeedCell.Type
         
         assert(cellClass != nil, "no feed cell registered, err")
         
         
-        var cell: FeedCell = cellClass!.init(style: .Default, reuseIdentifier: cellIdentifier)
-        if let reuseCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) {
+        var cell: FeedCell = cellClass!.init(style: .default, reuseIdentifier: cellIdentifier)
+        if let reuseCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) {
             cell = reuseCell as! FeedCell
         }
-        cell.selectionStyle = .None
+        cell.selectionStyle = .none
       
         cell.configCellWithItem(item)
         
@@ -84,7 +84,7 @@ class FeedStreamView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
     
     //MARK: UITableViewDelegate
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var height: CGFloat = 0
         
         let dh = context?.dataHandler as! FeedStreamDHProtocol
@@ -99,7 +99,7 @@ class FeedStreamView: UIView, UITableViewDataSource, UITableViewDelegate {
     
     
     //MARK: Pull Refresh
-    func refresh(sender:AnyObject){
+    @objc func refresh(sender:AnyObject){
         let bo = context?.businessObject as! FeedStreamBO
         bo.loadFeedsFromServer()
     }
@@ -109,7 +109,7 @@ class FeedStreamView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
     
     //MARK: Progress Loading
-    func setProgressVisible(visible:Bool) {
+    func setProgressVisible(_ visible:Bool) {
         if visible {
             PKHUD.sharedHUD.contentView = PKHUDProgressView()
             PKHUD.sharedHUD.show()

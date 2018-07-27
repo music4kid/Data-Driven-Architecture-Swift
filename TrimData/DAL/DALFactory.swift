@@ -11,7 +11,7 @@ import SQLite
 
 var _DAL = DALFactory.sharedInstance
 
-var dbQueue = dispatch_queue_create("TrimData.DB.SerialQueue", DISPATCH_QUEUE_SERIAL)
+var dbQueue = DispatchQueue(label: "TrimData.DB.SerialQueue")
 
 class DALFactory: NSObject {
     static var sharedInstance = DALFactory()
@@ -33,20 +33,16 @@ class DALFactory: NSObject {
     }
     
     //service layer is responsible for specifying the thread task runs on
-    func writeTaskOnDBQueue(async: Bool, task: () -> ()) {
+    func writeTaskOnDBQueue(_ async: Bool, task: @escaping () -> Void) {
         if async {
-            dispatch_async(dbQueue, { () -> Void in
-                task()
-            })
+            dbQueue.async(execute: task)
         } else {
             task()
         }
     }
     
     //we may run query after certain write task is finished
-    func asyncTaskOnDBQueue(task: () -> ()) {
-        dispatch_async(dbQueue, { () -> Void in
-            task()
-        })
+    func asyncTaskOnDBQueue(task: @escaping () -> Void) {
+        dbQueue.async(execute: task)
     }
 }

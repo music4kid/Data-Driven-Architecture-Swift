@@ -15,8 +15,7 @@ class GitHubRepositoryRequest: GitHubRequest {
         let githubAccountName = _Service.githubService.githubAccountName
         let repositoryUrl = "https://\(gitHubBaseUrl)" + "/users/\(githubAccountName!)/repos"
         
-        Alamofire.request(.GET, repositoryUrl.URLString)
-            .responseJSON { response in
+        Alamofire.request(repositoryUrl, method: .get).responseJSON { response in
                 
                 if let err = response.result.error {
                     print(err)
@@ -27,11 +26,11 @@ class GitHubRepositoryRequest: GitHubRequest {
 
                         for dic: NSDictionary in arr {
                             
-                            let id = String((dic["id"] as! NSNumber).longLongValue)
-                            let name = (dic["full_name"] as! String)
-                            let star = (dic["stargazers_count"] as! NSNumber).longLongValue
-                            let fork = (dic["forks_count"] as! NSNumber).longLongValue
-                            let openIssue = (dic["open_issues_count"] as! NSNumber).longLongValue
+                            let id = dic["id"] as? String ?? ""
+                            let name = dic["full_name"] as? String ?? ""
+                            let star = dic["stargazers_count"] as? Int ?? 0
+                            let fork = dic["forks_count"] as? Int ?? 0
+                            let openIssue = dic["open_issues_count"] as? Int ?? 0
                             
                             let repo = GitHubRepository(id: id, name: name, star: star, fork: fork, open: openIssue)
                             

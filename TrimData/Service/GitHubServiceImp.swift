@@ -35,25 +35,25 @@ class GitHubServiceImp: NSObject, GitHubServiceProtocol {
     
     var githubAccountName: String? {
         get {
-            return NSUserDefaults.standardUserDefaults().objectForKey(keyGitHubAccountName) as? String
+            return UserDefaults.standard.object(forKey: keyGitHubAccountName) as? String
         }
         set {
-            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: keyGitHubAccountName)
-            NSUserDefaults.standardUserDefaults().synchronize()
+            UserDefaults.standard.set(newValue, forKey: keyGitHubAccountName)
+            UserDefaults.standard.synchronize()
         }
     }
     var githubAccountPwd: String? {
         get {
-            return NSUserDefaults.standardUserDefaults().objectForKey(keyGitHubAccountPwd) as? String
+            return UserDefaults.standard.object(forKey: keyGitHubAccountPwd) as? String
         }
         set {
-            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: keyGitHubAccountPwd)
-            NSUserDefaults.standardUserDefaults().synchronize()
+            UserDefaults.standard.set(newValue, forKey: keyGitHubAccountPwd)
+            UserDefaults.standard.synchronize()
         }
     }
     
     //MARK: models logic
-    func updateOrInsertGitHubRepository(repo: GitHubRepository) {
+    func updateOrInsertGitHubRepository(_ repo: GitHubRepository) {
         if let eRepo = _Service.githubService.getGitHubRepositoryById(repo.id^) {
             //property update
             eRepo.name ^= repo.name^
@@ -76,7 +76,7 @@ class GitHubServiceImp: NSObject, GitHubServiceProtocol {
         }
     }
     
-    func getGitHubRepositoryById(id: String) -> GitHubRepository? {
+    func getGitHubRepositoryById(_ id: String) -> GitHubRepository? {
         //try get from db
         return _DAL.gitHubDal.getRepo(id)
     }

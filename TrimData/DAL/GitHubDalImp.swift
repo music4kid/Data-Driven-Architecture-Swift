@@ -58,7 +58,7 @@ class GitHubDalImp: DALImpBase, GitHubDalProtocol {
         return repos
     }
     
-    func saveRepo(repo: GitHubRepository) {
+    func saveRepo(_ repo: GitHubRepository) {
         do {
             if getRepo(repo.id~) != nil {
                 try db.run(tableRepo.filter(repo_id == repo.id~).update(
@@ -90,7 +90,7 @@ class GitHubDalImp: DALImpBase, GitHubDalProtocol {
         
     }
     
-    func getRepo(id: String) -> GitHubRepository? {
+    func getRepo(_ id: String) -> GitHubRepository? {
         var repo: GitHubRepository? = nil
         
         if let row = db.pluck(tableRepo.filter(repo_id == id)) {

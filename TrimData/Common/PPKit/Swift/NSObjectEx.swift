@@ -10,13 +10,13 @@ import UIKit
 import Observable
 
 //use address as hash value
-func objectHashString(obj: AnyObject) -> String {
+func objectHashString(_ obj: Any) -> String {
     return String(ObjectIdentifier(obj).uintValue)
 }
 
 extension NSObject {
-    class func classFromString(className: String) -> AnyClass! {
-        let className = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String + "." + className
+    class func classFromString(_ className: String) -> AnyClass! {
+        let className = Bundle.main.infoDictionary!["CFBundleName"] as! String + "." + className
         let aClass = NSClassFromString(className) as! NSObject.Type
         return aClass
     }

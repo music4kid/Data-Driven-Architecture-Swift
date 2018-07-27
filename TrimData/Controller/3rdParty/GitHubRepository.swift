@@ -12,11 +12,11 @@ import Observable
 class GitHubRepository {
     var id: Observable<String>
     var name: Observable<String>
-    var star: Observable<Int64>
-    var fork: Observable<Int64>
-    var openIssue: Observable<Int64>
+    var star: Observable<Int>
+    var fork: Observable<Int>
+    var openIssue: Observable<Int>
     
-    init(id: String, name: String, star: Int64, fork: Int64, open: Int64) {
+    init(id: String, name: String, star: Int, fork: Int, open: Int) {
         self.id = Observable(id)
         self.name = Observable(name)
         self.star = Observable(star)

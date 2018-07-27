@@ -9,8 +9,8 @@
 import UIKit
 
 func log(message: String) {
-    let file: NSString = __FILE__
-    fprint("\(file.lastPathComponent): \(__FUNCTION__): \(__LINE__): \(message) )")
+    let file: NSString = #file
+    fprint("\(file.lastPathComponent): \(#function): \(#line): \(message) )")
 }
 
 func fprint(format: String, _ args: CVarArgType...) {
@@ -19,7 +19,7 @@ func fprint(format: String, _ args: CVarArgType...) {
     #endif
 }
 
-func measure(function: String = __FUNCTION__, _ f: ()->()) {
+func measure(function: String = #function, _ f: ()->()) {
     let start = CACurrentMediaTime()
     f()
     let end = CACurrentMediaTime()

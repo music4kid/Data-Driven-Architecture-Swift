@@ -32,7 +32,7 @@ extension UIView {
         }
     }
     
-    public func newDidAddSubview(subview: UIView) {
+    public func newDidAddSubview(_ subview: UIView) {
         newDidAddSubview(subview)
         
         measure { () -> () in
@@ -40,7 +40,7 @@ extension UIView {
         }
     }
     
-    private func buildViewContextFromSuper(view: UIView?) {
+    private func buildViewContextFromSuper(_ view: UIView?) {
         if view!.context == nil {
             var sprView: UIView? = view!.superview
             while sprView != nil {
@@ -54,7 +54,7 @@ extension UIView {
         }
     }
     
-    private func buildViewContextForChildren(view: UIView?) {
+    private func buildViewContextForChildren(_ view: UIView?) {
         for subview: UIView in (view?.subviews)! {
             if subview.context != nil {
                 subview.context = self.context
