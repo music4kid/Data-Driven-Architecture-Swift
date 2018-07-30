@@ -15,9 +15,9 @@ class GitHubDalImp: DALImpBase, GitHubDalProtocol {
     var tableRepo: Table!
     let repo_id = Expression<String>("id")
     let repo_name = Expression<String>("name")
-    let repo_star = Expression<Int64>("star")
-    let repo_fork = Expression<Int64>("fork")
-    let repo_openIssue = Expression<Int64>("openIssue")
+    let repo_star = Expression<Int>("star")
+    let repo_fork = Expression<Int>("fork")
+    let repo_openIssue = Expression<Int>("openIssue")
     
     override init(db: Connection) {
         super.init(db: db)

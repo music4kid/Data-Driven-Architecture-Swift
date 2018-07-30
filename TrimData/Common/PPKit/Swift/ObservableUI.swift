@@ -15,7 +15,7 @@ var sema_binding = DispatchSemaphore(value: 1)
 func bindUIProperty <T> (_ prop: inout Observable<T>, _ target: NSObject, _ triggerNow: Bool, handler: @escaping (T) -> Void) {
     
     //remove old handler
-    sema_binding.wait(timeout: .distantFuture)
+    _ = sema_binding.wait(timeout: .distantFuture)
     if let eSub = (bindingMap[objectHashString(target)] as? EventSubscription<ValueChange<Observable<T>.ValueType>>) {
         prop -= eSub
     }
@@ -32,7 +32,7 @@ func bindUIProperty <T> (_ prop: inout Observable<T>, _ target: NSObject, _ trig
     //if target is destroyed, remove subscription too
     sub.addOwnedObject(target)
     
-    sema_binding.wait(timeout: .distantFuture)
+    _ = sema_binding.wait(timeout: .distantFuture)
     bindingMap[objectHashString(target)] = sub
     sema_binding.signal()
 }

@@ -25,7 +25,7 @@ class FeedCell: UITableViewCell {
     }
     
     //MARK: cell Util
-    static func calculateCellData(feedItem: FeedItem) {
+    static func calculateCellData(_ feedItem: FeedItem) {
         let cellClass: AnyClass? = getCellClassForItemType(feedItem.itemType)
         assert(cellClass != nil, "cell not registered")
         
