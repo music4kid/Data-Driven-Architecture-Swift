@@ -13,7 +13,7 @@ class SettingListView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor.white
     }
     
     required init?(coder aDecoder: NSCoder) {

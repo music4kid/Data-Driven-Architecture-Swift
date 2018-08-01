@@ -8,12 +8,12 @@
 
 import UIKit
 
-func log(message: String) {
+func log(_ message: String) {
     let file: NSString = #file
     fprint("\(file.lastPathComponent): \(#function): \(#line): \(message) )")
 }
 
-func fprint(format: String, _ args: CVarArgType...) {
+func fprint(_ format: String, _ args: Any...) {
     #if DEBUG
     print(NSString(format: format, arguments: getVaList(args)))
     #endif

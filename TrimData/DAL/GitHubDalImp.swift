@@ -86,20 +86,25 @@ class GitHubDalImp: DALImpBase, GitHubDalProtocol {
         }
     }
     
-    func deleteRepo(repo: GitHubRepository) {
+    func deleteRepo(_ repo: GitHubRepository) {
         
     }
     
     func getRepo(_ id: String) -> GitHubRepository? {
-        var repo: GitHubRepository? = nil
-        
-        if let row = db.pluck(tableRepo.filter(repo_id == id)) {
-            let repoId = row[repo_id]
-            let repoName = row[repo_name]
-            let repoStar = row[repo_star]
-            let repoFork = row[repo_fork]
-            let repoOpenIssue = row[repo_openIssue]
-            repo = GitHubRepository(id: repoId, name: repoName, star: repoStar, fork: repoFork, open: repoOpenIssue)
+        var repo: GitHubRepository?
+
+        do {
+            let result = try db.pluck(tableRepo.filter(repo_id == id))
+            if let row = result {
+                let repoId = row[repo_id]
+                let repoName = row[repo_name]
+                let repoStar = row[repo_star]
+                let repoFork = row[repo_fork]
+                let repoOpenIssue = row[repo_openIssue]
+                repo = GitHubRepository(id: repoId, name: repoName, star: repoStar, fork: repoFork, open: repoOpenIssue)
+            }
+        } catch _ {
+
         }
         
         return repo

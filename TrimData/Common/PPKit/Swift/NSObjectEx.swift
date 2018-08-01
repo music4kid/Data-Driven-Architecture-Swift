@@ -11,7 +11,7 @@ import Observable
 
 //use address as hash value
 func objectHashString(_ obj: Any) -> String {
-    return String(ObjectIdentifier(obj).uintValue)
+    return String(ObjectIdentifier(obj as AnyObject).hashValue)
 }
 
 extension NSObject {

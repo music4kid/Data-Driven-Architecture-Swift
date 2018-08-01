@@ -8,19 +8,34 @@
 
 import UIKit
 
+extension DispatchQueue {
+    
+    private static var _onceTracker = [String]()
+    
+    class func once(token: String, block: () -> Void) {
+        objc_sync_enter(self); defer { objc_sync_exit(self) }
+        
+        if _onceTracker.contains(token) {
+            return
+        }
+        
+        _onceTracker.append(token)
+        block()
+    }
+}
+
 extension UIView {
     
-    private struct Static {
-        static var token: dispatch_once_t = 0
-    }
+    private static let _onceToken = UUID().uuidString
     
     public static func prepareUIViewForCDD() {
-        dispatch_once(&Static.token) { () -> Void in
-            let originalSelector = Selector("didAddSubview:")
-            let swizzledSelector = Selector("newDidAddSubview:")
+        DispatchQueue.once(token: _onceToken) {
             
-            let originalMethod = class_getInstanceMethod(self, originalSelector)
-            let swizzledMethod = class_getInstanceMethod(self, swizzledSelector)
+            let originalSelector = #selector(didAddSubview)
+            let swizzledSelector = #selector(newDidAddSubview)
+            
+            guard let originalMethod = class_getInstanceMethod(self, originalSelector) else { return }
+            guard let swizzledMethod = class_getInstanceMethod(self, swizzledSelector) else { return }
             
             let didAddMethod = class_addMethod(self, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
             
@@ -32,7 +47,7 @@ extension UIView {
         }
     }
     
-    public func newDidAddSubview(_ subview: UIView) {
+    @objc public func newDidAddSubview(_ subview: UIView) {
         newDidAddSubview(subview)
         
         measure { () -> () in

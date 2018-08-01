@@ -13,9 +13,7 @@ class GitHubAccountRequest: GitHubRequest {
     func getGitHubAccountDetail(username: String) {
         let accountUrl = "https://\(gitHubBaseUrl)" + "/users/\(username)"
         
-        Alamofire.request(.GET, accountUrl.URLString)
-            .responseJSON { response in
-                
+        Alamofire.request(accountUrl).responseJSON { response in
                 if let err = response.result.error {
                     print(err)
                     //notify application layer

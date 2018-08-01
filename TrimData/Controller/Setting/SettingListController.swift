@@ -11,7 +11,7 @@ import UIKit
 class SettingListController: TDViewController {
     
     let holderView: SettingListView = {
-        let holderView = SettingListView(frame: UIScreen.mainScreen().bounds)
+        let holderView = SettingListView(frame: UIScreen.main.bounds)
         return holderView
     }()
     

@@ -17,22 +17,22 @@ class FeedItemGitHubRepo: FeedItem {
     
     init(repo: GitHubRepository) {
         
-        super.init(aType: .FeedItemGitHubRepo)
+        super.init(aType: .feedItemGitHubRepo)
         
         //bind value, custom logic may apply
-        bindProperty(&repo.name, self) { (nV: String) -> () in
+        bindProperty(&repo.name, self) { nV in
             self.repoName <- nV
         }
         
-        bindProperty(&repo.star, self) { (nV: Int64) -> () in
+        bindProperty(&repo.star, self) { nV in
             self.repoStar <- "star: \(nV)"
         }
         
-        bindProperty(&repo.fork, self) { (nV: Int64) -> () in
+        bindProperty(&repo.fork, self) { nV in
             self.repoFork <- "fork: \(nV)"
         }
         
-        bindProperty(&repo.openIssue, self) { (nV: Int64) -> () in
+        bindProperty(&repo.openIssue, self) { nV in
             self.repoOpenIssue <- "open issue: \(nV)"
         }
     }
