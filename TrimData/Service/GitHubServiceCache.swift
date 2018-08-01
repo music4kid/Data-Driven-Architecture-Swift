@@ -12,27 +12,27 @@ import Observable
 class GitHubServiceCache: GitHubServiceImp {
     
     private var cachedRepos = [String: GitHubRepository]()
-    private var sema_repos = dispatch_semaphore_create(1)
+    private var sema_repos = DispatchSemaphore(value: 1)
     
     //MARK: models logic
     override func loadRepositories() -> [GitHubRepository] {
         let repos = super.loadRepositories()
         
-        dispatch_semaphore_wait(sema_repos, DISPATCH_TIME_FOREVER)
+        _ = sema_repos.wait(timeout: .distantFuture)
         for repo in repos {
             cachedRepos[repo.id^] = repo
         }
-        dispatch_semaphore_signal(sema_repos)
+        sema_repos.signal()
         
         return repos
     }
     
-    override func getGitHubRepositoryById(id: String) -> GitHubRepository? {
+    override func getGitHubRepositoryById(_ id: String) -> GitHubRepository? {
         var repo: GitHubRepository?
         
-        dispatch_semaphore_wait(sema_repos, DISPATCH_TIME_FOREVER)
+        _ = sema_repos.wait(timeout: .distantFuture)
         repo = cachedRepos[id]
-        dispatch_semaphore_signal(sema_repos)
+        sema_repos.signal()
         
         if repo != nil {
             return repo
@@ -40,22 +40,22 @@ class GitHubServiceCache: GitHubServiceImp {
         else {
             let dbRepo = super.getGitHubRepositoryById(id)
             if dbRepo != nil {
-                dispatch_semaphore_wait(sema_repos, DISPATCH_TIME_FOREVER)
+                _ = sema_repos.wait(timeout: .distantFuture)
                 cachedRepos[dbRepo!.id^] = dbRepo!
-                dispatch_semaphore_signal(sema_repos)
+                sema_repos.signal()
             }
             return dbRepo
         }
     }
     
-    override func updateOrInsertGitHubRepository(repo: GitHubRepository) {
+    override func updateOrInsertGitHubRepository(_ repo: GitHubRepository) {
         super.updateOrInsertGitHubRepository(repo)
        
-        dispatch_semaphore_wait(sema_repos, DISPATCH_TIME_FOREVER)
+        _ = sema_repos.wait(timeout: .distantFuture)
         if cachedRepos[repo.id^] == nil {
             cachedRepos[repo.id^] = repo
         }
-        dispatch_semaphore_signal(sema_repos)
+        sema_repos.signal()
     }
 
     

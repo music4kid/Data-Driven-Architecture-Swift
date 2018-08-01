@@ -22,13 +22,13 @@ class FeedStreamBO: CDD.BusinessObject, FeedStreamBOProtocol {
         super.init(bc: bc)
         
         //observe data events
-        _Event.register(self, event: _Event.githubEvent.insert) { (repo: GitHubRepository) -> () in
+        _Event.register(self, event: _Event.githubEvent.insert) { (repo: GitHubRepository) -> Void in
             let repoItem = FeedItemGitHubRepo(repo: repo)
             let dataHandler = self.weakContext!.dataHandler as! FeedStreamDH
             dataHandler.insertNewFeedItem(repoItem)
         }
         
-        _Event.register(self, event: _Event.githubEvent.update) { (repo: GitHubRepository) -> () in
+        _Event.register(self, event: _Event.githubEvent.update) { (repo: GitHubRepository) -> Void in
            //feed item update is triggered by property observer, stop loading UI only
             self.boDelegate?.stopLoadingUI()
             

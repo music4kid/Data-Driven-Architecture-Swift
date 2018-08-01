@@ -13,16 +13,14 @@ class GitHubAccountRequest: GitHubRequest {
     func getGitHubAccountDetail(username: String) {
         let accountUrl = "https://\(gitHubBaseUrl)" + "/users/\(username)"
         
-        Alamofire.request(.GET, accountUrl.URLString)
-            .responseJSON { response in
-                
+        Alamofire.request(accountUrl).responseJSON { response in
                 if let err = response.result.error {
                     print(err)
                     //notify application layer
                 }
                 else {
                     if let jsonValue = response.result.value as? String{
-                        let dict: [String: AnyObject]? = jsonValue.pp_toDictionary()
+                        let dict: [String: Any]? = jsonValue.pp_toDictionary()
                         if dict != nil {
                             
                         }

@@ -11,20 +11,20 @@
 import Observable
 
 //solve possible operator conflict
-postfix operator ~ { }
+postfix operator ~
 public postfix func ~ <T : AnyObservable> (x: T) -> T.ValueType {
     return x.value
 }
 
 // event += { new in ... }
-public func += <T> (event: EventReference<T>, handler: T -> ()) -> EventSubscription<T> {
-    return event.add({
+public func += <T> (event: EventReference<T>, handler: @escaping (T) -> Void) -> EventSubscription<T> {
+    return event.add {
         let d = $0
         //data event is handled by UI layer most of the time, run handler on main thread for thread safty
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        DispatchQueue.main.async {
             handler(d)
-        })
-    })
+        }
+    }
 }
 // event -= sub
 public func -= <T> (event: EventReference<T>, sub: EventSubscription<T>) {
@@ -32,13 +32,12 @@ public func -= <T> (event: EventReference<T>, sub: EventSubscription<T>) {
 }
 
 public class ObservableEx {
-    var sema_event = dispatch_semaphore_create(1)
-    var subscriptionMap = [NSString: [AnyObject]]()
+    var sema_event = DispatchSemaphore(value: 1)
+    var subscriptionMap = [String: [Any]]()
     
-    func register <T> (target: AnyObject, event: EventReference<T>, handler: T -> ()) {
+    func register <T> (_ target: Any, event: EventReference<T>, handler: @escaping (T) -> Void) {
         let sub = (event += handler)
-        
-        dispatch_semaphore_wait(sema_event, DISPATCH_TIME_FOREVER)
+        _ = sema_event.wait(timeout: .distantFuture)
         if var existingSubs = subscriptionMap[objectHashString(target)] {
             existingSubs.append(sub)
         }
@@ -46,20 +45,20 @@ public class ObservableEx {
             let subs = [sub]
             subscriptionMap[objectHashString(target)] = subs
         }
-        dispatch_semaphore_signal(sema_event)
+        sema_event.signal()
     }
     
-    func unregisterAll(target: AnyObject) {
+    func unregisterAll(_ target: Any) {
         
-        dispatch_semaphore_wait(sema_event, DISPATCH_TIME_FOREVER)
+        _ = sema_event.wait(timeout: .distantFuture)
         if var existingSubs = subscriptionMap[objectHashString(target)] {
-            for obj: AnyObject in existingSubs {
+            for obj in existingSubs {
                 let sub = obj as! EventSubscription<AnyClass>
                 sub.invalidate()
             }
             existingSubs.removeAll()
         }
-        dispatch_semaphore_signal(sema_event)
+        sema_event.signal()
     }
 }
 

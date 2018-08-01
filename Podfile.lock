@@ -1,25 +1,47 @@
 PODS:
-  - Alamofire (3.2.0)
-  - Kingfisher (1.8.5)
-  - Observable-Swift (0.5.0)
-  - PKHUD (2.2.5)
-  - SnapKit (0.18.0)
-  - SQLite.swift (0.9.2)
+  - Alamofire (4.7.3)
+  - Kingfisher (4.8.1)
+  - Observable-Swift (0.7.0)
+  - PKHUD (5.1.0)
+  - SnapKit (4.0.0)
+  - SQLite.swift (0.11.5):
+    - SQLite.swift/standard (= 0.11.5)
+  - SQLite.swift/standard (0.11.5)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.0)
-  - Kingfisher (~> 1.8.2)
-  - Observable-Swift (~> 0.5.0)
-  - PKHUD (~> 2.2.5)
-  - SnapKit (~> 0.18.0)
-  - SQLite.swift (~> 0.9.2)
+  - Alamofire
+  - Kingfisher
+  - Observable-Swift (from `https://github.com/devialet/Observable-Swift`, commit `16df73b73281dd5f3d72de27c32472115c56d509`)
+  - PKHUD
+  - SnapKit
+  - SQLite.swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - PKHUD
+    - SnapKit
+    - SQLite.swift
+
+EXTERNAL SOURCES:
+  Observable-Swift:
+    :commit: 16df73b73281dd5f3d72de27c32472115c56d509
+    :git: https://github.com/devialet/Observable-Swift
+
+CHECKOUT OPTIONS:
+  Observable-Swift:
+    :commit: 16df73b73281dd5f3d72de27c32472115c56d509
+    :git: https://github.com/devialet/Observable-Swift
 
 SPEC CHECKSUMS:
-  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
-  Kingfisher: 780fed0fa82692a3bd59d53329ae2b85cdd354a5
-  Observable-Swift: aecd04920b22e890f528d42f557c51c525ca79ee
-  PKHUD: 15d9db01fb008bb9247c6d785c585f587955b113
-  SnapKit: e1f090a6d47b1dd4bd89b73f72b6746a7835ef3c
-  SQLite.swift: 5dca22dbf6634fdb9c3270fae9491830804e9b2d
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  Observable-Swift: 6704bff3b5c3e9a01b0db3c15287f3b6cad1c6b9
+  PKHUD: 62ea46a1e88c4def1da784878d199bb54c841e3c
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: cfb9d9dc449c642d8f4688b88f9f3561288e2408
+
+COCOAPODS: 1.5.3

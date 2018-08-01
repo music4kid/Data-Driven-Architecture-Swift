@@ -9,9 +9,20 @@
 import UIKit
 
 public enum FeedItemType: Int {
-    case FeedItemNormal = 0
-    case FeedItemGitHubRepo = 1
-    case FeedItemUnknown = 1000
+    case feedItemNormal = 0
+    case feedItemGitHubRepo = 1
+    case feedItemUnknown = 1000
+    
+    var str: String {
+        switch self {
+        case .feedItemNormal:
+            return "feedItemNormal"
+        case .feedItemGitHubRepo:
+            return "feedItemGitHubRepo"
+        case .feedItemUnknown:
+            return "feedItemUnknown"
+        }
+    }
 }
 
 public class FeedItem {
@@ -20,7 +31,7 @@ public class FeedItem {
     
     var displayHeight: CGFloat = 0
     
-    init(aType: FeedItemType = FeedItemType.FeedItemUnknown) {
+    init(aType: FeedItemType = .feedItemUnknown) {
         itemType = aType
     }
 }

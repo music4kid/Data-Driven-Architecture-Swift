@@ -27,7 +27,7 @@ class FeedStreamDH: CDD.DataHandler, FeedStreamDHProtocol {
         return feedItems
     }
     
-    func setFeedItems(items: [FeedItem]) {
+    func setFeedItems(_ items: [FeedItem]) {
         for item: FeedItem in items {
             FeedCell.calculateCellData(item)
         }
@@ -40,7 +40,7 @@ class FeedStreamDH: CDD.DataHandler, FeedStreamDHProtocol {
         }
     }
     
-    func insertNewFeedItem(item: FeedItem) {
+    func insertNewFeedItem(_ item: FeedItem) {
         FeedCell.calculateCellData(item)
         feedItems.append(item)
         

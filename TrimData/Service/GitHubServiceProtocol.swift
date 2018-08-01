@@ -12,6 +12,6 @@ protocol GitHubServiceProtocol {
     func loadRepositories() -> [GitHubRepository]
     func loadRepositoriesFromServer()
     
-    func getGitHubRepositoryById(id: String) -> GitHubRepository?
-    func updateOrInsertGitHubRepository(repo: GitHubRepository)
+    func getGitHubRepositoryById(_ id: String) -> GitHubRepository?
+    func updateOrInsertGitHubRepository(_ repo: GitHubRepository)
 }

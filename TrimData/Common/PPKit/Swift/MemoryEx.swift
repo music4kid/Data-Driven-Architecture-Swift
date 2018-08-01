@@ -8,6 +8,6 @@
 
 import UIKit
 
-func address(o: UnsafePointer<Void>) -> Int {
-    return unsafeBitCast(o, Int.self)
+func address(_ o: UnsafeRawPointer) -> Int {
+    return Int(bitPattern: o)
 }

@@ -10,9 +10,9 @@ import UIKit
 
 protocol FeedStreamDHProtocol {
     func getFeedItems() -> [FeedItem]
-    func setFeedItems(items: [FeedItem])
+    func setFeedItems(_ items: [FeedItem])
     
-    func insertNewFeedItem(item: FeedItem)
+    func insertNewFeedItem(_ item: FeedItem)
     
     func getFeedItemDataEvent() -> CDDDataEventSource<FeedItem>
 }

@@ -15,9 +15,9 @@ class GitHubDalImp: DALImpBase, GitHubDalProtocol {
     var tableRepo: Table!
     let repo_id = Expression<String>("id")
     let repo_name = Expression<String>("name")
-    let repo_star = Expression<Int64>("star")
-    let repo_fork = Expression<Int64>("fork")
-    let repo_openIssue = Expression<Int64>("openIssue")
+    let repo_star = Expression<Int>("star")
+    let repo_fork = Expression<Int>("fork")
+    let repo_openIssue = Expression<Int>("openIssue")
     
     override init(db: Connection) {
         super.init(db: db)
@@ -58,7 +58,7 @@ class GitHubDalImp: DALImpBase, GitHubDalProtocol {
         return repos
     }
     
-    func saveRepo(repo: GitHubRepository) {
+    func saveRepo(_ repo: GitHubRepository) {
         do {
             if getRepo(repo.id~) != nil {
                 try db.run(tableRepo.filter(repo_id == repo.id~).update(
@@ -86,20 +86,25 @@ class GitHubDalImp: DALImpBase, GitHubDalProtocol {
         }
     }
     
-    func deleteRepo(repo: GitHubRepository) {
+    func deleteRepo(_ repo: GitHubRepository) {
         
     }
     
-    func getRepo(id: String) -> GitHubRepository? {
-        var repo: GitHubRepository? = nil
-        
-        if let row = db.pluck(tableRepo.filter(repo_id == id)) {
-            let repoId = row[repo_id]
-            let repoName = row[repo_name]
-            let repoStar = row[repo_star]
-            let repoFork = row[repo_fork]
-            let repoOpenIssue = row[repo_openIssue]
-            repo = GitHubRepository(id: repoId, name: repoName, star: repoStar, fork: repoFork, open: repoOpenIssue)
+    func getRepo(_ id: String) -> GitHubRepository? {
+        var repo: GitHubRepository?
+
+        do {
+            let result = try db.pluck(tableRepo.filter(repo_id == id))
+            if let row = result {
+                let repoId = row[repo_id]
+                let repoName = row[repo_name]
+                let repoStar = row[repo_star]
+                let repoFork = row[repo_fork]
+                let repoOpenIssue = row[repo_openIssue]
+                repo = GitHubRepository(id: repoId, name: repoName, star: repoStar, fork: repoFork, open: repoOpenIssue)
+            }
+        } catch _ {
+
         }
         
         return repo

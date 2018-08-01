@@ -3,12 +3,12 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'TrimData' do
-pod 'Alamofire', '~> 3.0'
-pod 'Observable-Swift', '~> 0.5.0'
-pod 'SnapKit', '~> 0.18.0'
-pod 'Kingfisher', '~> 1.8.2'
-pod 'PKHUD', '~> 2.2.5'
-pod 'SQLite.swift', '~> 0.9.2'
+    pod 'Alamofire'
+    pod 'Observable-Swift', :git => 'https://github.com/devialet/Observable-Swift', :commit => '16df73b73281dd5f3d72de27c32472115c56d509'
+    pod 'SnapKit'
+    pod 'Kingfisher'
+    pod 'PKHUD'
+    pod 'SQLite.swift'
 end
 
 target 'TrimDataTests' do

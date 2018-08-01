@@ -16,7 +16,7 @@ class FeedCellNormal: FeedCell {
     var imgAvatar = UIImageView()
     var lbDesc = UILabel()
     
-    override class func fillCellData(feedItem: FeedItem) {
+    override class func fillCellData(_ feedItem: FeedItem) {
         feedItem.displayHeight = 100
     }
 
@@ -34,19 +34,19 @@ class FeedCellNormal: FeedCell {
     }
     
     func initUIElements() {
-        lbName.textColor = UIColor.blackColor()
-        lbName.backgroundColor = UIColor.clearColor()
-        lbName.font = UIFont.systemFontOfSize(14)
-        lbName.textAlignment = NSTextAlignment.Left
+        lbName.textColor = UIColor.black
+        lbName.backgroundColor = UIColor.clear
+        lbName.font = UIFont.systemFont(ofSize: 14)
+        lbName.textAlignment = .left
         contentView.addSubview(lbName)
         
-        lbDesc.textColor = UIColor.blackColor()
-        lbDesc.backgroundColor = UIColor.clearColor()
-        lbDesc.font = UIFont.systemFontOfSize(14)
-        lbDesc.textAlignment = NSTextAlignment.Left
+        lbDesc.textColor = UIColor.black
+        lbDesc.backgroundColor = UIColor.clear
+        lbDesc.font = UIFont.systemFont(ofSize: 14)
+        lbDesc.textAlignment = .left
         contentView.addSubview(lbDesc)
         
-        imgAvatar.backgroundColor = UIColor.clearColor()
+        imgAvatar.backgroundColor = UIColor.clear
         contentView.addSubview(imgAvatar)
     }
     
@@ -55,35 +55,35 @@ class FeedCellNormal: FeedCell {
         let marginY = 4.0
         let avatarSize = 40
         
-        imgAvatar.snp_makeConstraints { (make) -> Void in
+        imgAvatar.snp.makeConstraints { (make) in
             make.topMargin.equalTo(marginY)
             make.leftMargin.equalTo(marginX)
             make.size.equalTo(avatarSize)
         }
         
-        lbName.snp_makeConstraints { (make) -> Void in
+        lbName.snp.makeConstraints { (make) in
             make.top.equalTo(imgAvatar)
-            make.left.equalTo(imgAvatar.snp_right).offset(4);
+            make.left.equalTo(imgAvatar.snp.right).offset(4);
             make.width.equalTo(contentView)
             make.height.equalTo(15)
         }
         
-        lbDesc.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(lbName.snp_bottom).offset(marginY)
+        lbDesc.snp.makeConstraints { (make) in
+            make.top.equalTo(lbName.snp.bottom).offset(marginY)
             make.left.equalTo(lbName)
             make.width.equalTo(lbName)
             make.height.equalTo(15)
         }
     }
     
-    override func configCellWithItem(item: FeedItem) {
+    override func configCellWithItem(_ item: FeedItem) {
         
         if let normalItem = item as? FeedItemNormal {
             lbName.text = normalItem.itemName
             
             lbDesc.text = normalItem.itemDesc
             
-            imgAvatar.kf_setImageWithURL(NSURL(string: normalItem.itemAvatar!)!)
+            imgAvatar.kf.setImage(with: URL(string: normalItem.itemAvatar!))
         }
         
         

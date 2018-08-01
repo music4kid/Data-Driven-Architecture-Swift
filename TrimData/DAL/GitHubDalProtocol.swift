@@ -10,9 +10,9 @@ import UIKit
 
 protocol GitHubDalProtocol {
     func loadAllRepos() -> [GitHubRepository]
-    func saveRepo(repo: GitHubRepository)
-    func deleteRepo(repo: GitHubRepository)
-    func getRepo(id: String) -> GitHubRepository?
+    func saveRepo(_ repo: GitHubRepository)
+    func deleteRepo(_ repo: GitHubRepository)
+    func getRepo(_ id: String) -> GitHubRepository?
     func deleteAllRepos()
     
 }
