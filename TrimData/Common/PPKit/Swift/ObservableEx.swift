@@ -18,13 +18,13 @@ public postfix func ~ <T : AnyObservable> (x: T) -> T.ValueType {
 
 // event += { new in ... }
 public func += <T> (event: EventReference<T>, handler: @escaping (T) -> Void) -> EventSubscription<T> {
-    return event.add({
+    return event.add {
         let d = $0
         //data event is handled by UI layer most of the time, run handler on main thread for thread safty
         DispatchQueue.main.async {
             handler(d)
         }
-    })
+    }
 }
 // event -= sub
 public func -= <T> (event: EventReference<T>, sub: EventSubscription<T>) {
@@ -35,7 +35,7 @@ public class ObservableEx {
     var sema_event = DispatchSemaphore(value: 1)
     var subscriptionMap = [String: [Any]]()
     
-    func register <T> (_ target: Any, event: EventReference<T>, handler: (T) -> Void) {
+    func register <T> (_ target: Any, event: EventReference<T>, handler: @escaping (T) -> Void) {
         let sub = (event += handler)
         _ = sema_event.wait(timeout: .distantFuture)
         if var existingSubs = subscriptionMap[objectHashString(target)] {
